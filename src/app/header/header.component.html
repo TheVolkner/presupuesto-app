@@ -1,0 +1,20 @@
+<div class="box-bg">
+  <div id="heading">
+    <p>Presupuesto Disponible:</p>
+    <h1>{{totalIngresos - totalEgresos | currency:'USD':'$':'1.2-2'}}</h1>
+  </div>
+  <div id="heading">
+    <div class="box-ingresos">
+      <p>INGRESOS:</p>
+      <p class="ingreso-ubicacion">{{totalIngresos | currency:'USD':'$':'1.2-2'}}</p>
+    </div>
+    <div class="box-egresos">
+      <p>EGRESOS:</p>
+      <div class="egreso-porcentaje">
+      <p>{{totalEgresos | currency:'USD':'- $':'1.2-2'}}</p>
+      <p class="porcentaje">{{totalEgresos / totalIngresos | percent: '2.0-0'}}</p>
+    </div>
+    </div>
+  </div>
+</div>
+

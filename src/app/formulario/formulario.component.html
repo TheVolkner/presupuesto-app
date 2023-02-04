@@ -1,0 +1,16 @@
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+
+
+<div id="heading-gray">
+  <select class="select" [ngClass]="registro == 1 ? 'greenFocus' : 'redfocus'" [(ngModel)]="registro">
+    <option value="1">+</option>
+    <option value="0">-</option>
+  </select>
+    <input [ngClass]="registro == 1 ? 'greenFocus' : 'redfocus'" type="text" placeholder=" Agregar Descripción"  required [(ngModel)]="asunto">
+    <input [ngClass]="registro == 1 ? 'greenFocus' : 'redfocus'" type="number" placeholder=" Monto" required [(ngModel)]="monto">
+  <button class="btn" type=submit (click)="enviarRegistro()">
+    <span [ngClass]="registro == 1 ? 'material-symbols-outlined monto-ingreso' : 'material-symbols-outlined monto-egreso'" id="iconos">
+      check_circle
+      </span>
+  </button>
+</div>
