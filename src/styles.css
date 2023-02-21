@@ -8,6 +8,7 @@ html {
 
     margin:0;
     padding:0;
+    position: relative;
   }
 
 .box-bg{
@@ -164,6 +165,7 @@ html {
   .box-resumen{
 
     display: flex;
+    min-height: 100vh;
   }
 
 
