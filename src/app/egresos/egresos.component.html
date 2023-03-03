@@ -1,8 +1,8 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
 
-    <div class="transaccion">
+    <section class="transaccion">
       <p class="p-black asunto">{{egreso.asunto}}</p>
-      <div class="egreso-porcentaje">
+      <section class="egreso-porcentaje">
         <p class="monto-egreso p-black">{{egreso.monto | currency:'USD':'-$':'1.2-2'}}</p>
         <p class="porcentaje-white">{{egreso.monto / totalIngresos | percent:'2.0-0'}}</p>
         <button class="btn btn-delete" (click)="eliminarEgreso(egreso)">
@@ -10,8 +10,8 @@
             cancel
             </span>
         </button>
-      </div>
-    </div>
+      </section>
+    </section>
 
 
 

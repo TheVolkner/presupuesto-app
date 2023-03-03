@@ -1,13 +1,13 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
 
-    <div class="transaccion">
+    <section class="transaccion">
       <p class="p-black asunto">{{ingreso.asunto}}</p>
-      <div class="egreso-porcentaje">
+      <section class="egreso-porcentaje">
         <p class="p-black monto-ingreso">{{ingreso.monto | currency: 'USD': '$': '1.2-2'}}</p>
         <button class="btn btn-delete" (click)="eliminarIngreso(ingreso)">
           <span class="material-symbols-outlined monto-ingreso ">
             cancel
             </span>
         </button>
-      </div>
-    </div>
+      </section>
+    </section>

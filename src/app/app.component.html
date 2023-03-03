@@ -1,26 +1,31 @@
-<app-header></app-header>
-<app-formulario
-(envioIngreso) = "registrarIngreso($event)"
-(envioEgreso) = "registrarEgreso($event)"></app-formulario>
-<div class="box-resumen">
-  <div class="box">
-    <p class="ingresos" >INGRESOS</p>
-    <div class="tabla">
-      <app-ingresos *ngFor="let ingreso of ingresos;"
-      [ingreso] = "ingreso"
-      (ingresoEliminar)="eliminarIngreso($event)"
-      ></app-ingresos>
-    </div>
-  </div>
-  <div class="box">
-    <p class="egresos" >EGRESOS</p>
-    <div class="tabla">
-      <app-egresos *ngFor="let egreso of egresos;"
-      [egreso] = "egreso"
-      [totalIngresos]="ingresosTotales"
-      (egresoEliminar)="eliminarEgreso($event)"
-      ></app-egresos>
-    </div>
-  </div>
-</div>
-<app-footer></app-footer>
+<main>
+  <app-header></app-header>
+  <app-formulario
+    (envioIngreso)="registrarIngreso($event)"
+    (envioEgreso)="registrarEgreso($event)"
+  ></app-formulario>
+  <section class="box-resumen">
+    <section class="box">
+      <p class="ingresos">INGRESOS</p>
+      <section class="tabla">
+        <app-ingresos
+          *ngFor="let ingreso of ingresos"
+          [ingreso]="ingreso"
+          (ingresoEliminar)="eliminarIngreso($event)"
+        ></app-ingresos>
+      </section>
+    </section>
+    <section class="box">
+      <p class="egresos">EGRESOS</p>
+      <section class="tabla">
+        <app-egresos
+          *ngFor="let egreso of egresos"
+          [egreso]="egreso"
+          [totalIngresos]="ingresosTotales"
+          (egresoEliminar)="eliminarEgreso($event)"
+        ></app-egresos>
+      </section>
+    </section>
+  </section>
+  <app-footer></app-footer>
+</main>
