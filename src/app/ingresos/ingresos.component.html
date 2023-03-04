@@ -2,12 +2,12 @@
 
     <section class="transaccion">
       <p class="p-black asunto">{{ingreso.asunto}}</p>
-      <section class="egreso-porcentaje">
+      <div class="egreso-porcentaje">
         <p class="p-black monto-ingreso">{{ingreso.monto | currency: 'USD': '$': '1.2-2'}}</p>
         <button class="btn btn-delete" (click)="eliminarIngreso(ingreso)">
           <span class="material-symbols-outlined monto-ingreso ">
             cancel
             </span>
         </button>
-      </section>
+      </div>
     </section>

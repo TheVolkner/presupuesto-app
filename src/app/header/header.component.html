@@ -1,18 +1,18 @@
-<article class="box-bg">
-  <section id="heading">
+<section class="box-bg">
+  <div id="heading">
     <p>Presupuesto Disponible:</p>
     <h1>
       {{ totalIngresos - totalEgresos | currency : "USD" : "$" : "1.2-2" }}
     </h1>
-  </section>
-  <section id="heading">
-    <section class="box-ingresos">
+  </div>
+  <div id="heading">
+    <div class="box-ingresos">
       <p>INGRESOS:</p>
       <p class="ingreso-ubicacion">
         {{ totalIngresos | currency : "USD" : "$" : "1.2-2" }}
       </p>
-    </section>
-    <section class="box-egresos">
+    </div>
+    <div class="box-egresos">
       <p>EGRESOS:</p>
       <div class="egreso-porcentaje">
         <p>{{ totalEgresos | currency : "USD" : "- $" : "1.2-2" }}</p>
@@ -20,6 +20,6 @@
           {{ totalEgresos / totalIngresos | percent : "2.0-0" }}
         </p>
       </div>
-    </section>
-  </section>
-</article>
+    </div>
+  </div>
+</section>
